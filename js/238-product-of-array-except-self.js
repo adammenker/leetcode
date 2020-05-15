@@ -1,6 +1,8 @@
 // given array of ints and array has more that 1 element, find product of all elements except current element
 // input [1,2,3,4], output [24,12,8,6]
 
+// EFFICIENT
+
 var productExceptSelf = function(nums) {
     let total = 1;
     let zeroIndexes = []

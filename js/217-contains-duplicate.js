@@ -1,8 +1,8 @@
 // check to see if there are duplicates in array of integers
 
 // i think my time complexity is O(2n log(n)), sort takes n log(n) and then i do another O(n) loop to check
-// time: 31%
-// space: 88%
+
+// EFFICIENT BUT IMPROVES WITH HASH TABLE
 
 var containsDuplicate = function(nums) {
     if(nums){

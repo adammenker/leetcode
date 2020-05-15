@@ -2,28 +2,30 @@
 
 // test cases: [7,1,5,3,6,4], [7,6,4,3,1]
 
+// EFFICIENT
+
 var maxProfit = function(prices) {
-    let low, profit;
-    low = prices[0];
-    profit = 0;
+    let profit = 0;
+    let current;
+    let buy = Number.POSITIVE_INFINITY;
+
     for(let i = 0; i < prices.length; i++){
-        
-        if(prices[i] > low) {
-            if((prices[i] - low) > profit){
-                profit = prices[i] - low;
+        if(buy > prices[i]){
+            buy = prices[i];
+        } else {
+            current = prices[i] - buy;
+            if(current > profit){
+                profit = current
             }
-        } else if (prices[i] <= low){
-            low = prices[i];
-            prices = prices.slice(i);
-            i = 0;
         }
     }
-    console.log(profit);
+    return profit;
 };
 
 
 
 test_1 = [7,1,5,3,6,4];
 test_2 = [7,6,4,3,1]
+check = [10,20,30,40,50,5,1,30]
 
-maxProfit(test_2);
+console.log(maxProfit(check));
