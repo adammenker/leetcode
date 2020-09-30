@@ -1,0 +1,1 @@
+//pop from front of check array so query is always O(1)
